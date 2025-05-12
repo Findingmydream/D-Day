@@ -66,8 +66,7 @@
     .plan-container {
       width: 90%;
       max-width: 800px;
-      max-height: 400px;
-      overflow-y: auto;
+      /* max-height, overflow-y 제거! */
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 12px;
@@ -76,11 +75,12 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      box-sizing: border-box;
     }
 
     .plan-item {
       display: flex;
-      flex-direction: column; /* 이미지를 위로, 글씨를 아래로 */
+      flex-direction: column;
       align-items: center;
       background-color: rgba(255, 255, 255, 0.1);
       padding: 18px 10px 14px 10px;
@@ -137,7 +137,7 @@
       .plan-container {
         width: 98%;
         max-width: none;
-        max-height: 300px;
+        /* max-height, overflow-y 제거! */
         font-size: 1rem;
         padding: 10px;
       }
@@ -195,7 +195,6 @@
           { text: "ソウルの雑貨店と市場に行って <br>(ここで途中でお腹が空いたら何か食べようね！)", img: "market.png" },
           { text: "南山タワーの夜景を見る", img: "namsan.png" },
           { text: "1日目の日程、仕上げ" }
-
         ];
       } else if (day === 2) {
         plans = [
@@ -204,9 +203,7 @@
           { text: "薬菓作りに行こう!", img: "biskit.png" }, 
           { text: "私たち、茶店に行こうかな？ これは僕が明日聞かないと", img: "teahouse.png" },
           { text: "ソウルのホルモン居酒屋行こう", img: "hormon.png" }, 
-           { text: "2日目の予定、無事終了！" }
-
-          
+          { text: "2日目の予定、無事終了！" }
         ];
       }
 
